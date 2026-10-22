@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: freqtrade-bot
+    env: docker
+    region: oregon
+    plan: free
+    buildCommand: ""
+    startCommand: "freqtrade trade --config user_data/config.json --strategy SampleStrategy"
+    envVars:
+      - key: FREQTRADE__API_SERVER__ENABLED
+        value: "true"
+      - key: FREQTRADE__API_SERVER__LISTEN_IP_ADDRESS
+        value: "0.0.0.0"
+      - key: FREQTRADE__API_SERVER__LISTEN_PORT
+        value: "10000"
+      - key: FREQTRADE__API_SERVER__USERNAME
+        value: "freqtrader"
+      - key: FREQTRADE__API_SERVER__PASSWORD
+        value: "ChangeThisSecurePassword123"
