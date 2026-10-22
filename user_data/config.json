@@ -1,0 +1,66 @@
+{
+    "max_open_trades": 5,
+    "stake_currency": "USDT",
+    "stake_amount": 100,
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "USD",
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "cancel_open_orders_on_exit": false,
+    "exchange": {
+        "name": "kucoin",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "SOL/USDT",
+            "XRP/USDT"
+        ],
+        "pair_blacklist": []
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0
+    },
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 10000,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "random_secret_key_here",
+        "ws_token": "random_ws_token_here",
+        "CORS_origins": []
+    },
+    "bot_name": "freqtrade",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}
